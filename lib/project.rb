@@ -11,9 +11,9 @@ class Project
       if backed_project == self
         already_backed = true
       end
-      if already_backed == false
-        backer.back_project(self)
-      end
+    end
+    if already_backed == false
+      backer.back_project(self)
     end
   end
 end
