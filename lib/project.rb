@@ -6,9 +6,9 @@ class Project
   attr_reader :backers, :title
   def add_backer(backer)
     @backers << backer
-    backer.back_project(self)
+    backer.back_project_minimalist(self)
   end
-  def add_backer_minimalist
+  def add_backer_minimalist(backer)
     @backers << backer
   end
 end
