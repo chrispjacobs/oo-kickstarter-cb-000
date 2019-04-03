@@ -14,5 +14,6 @@ class Project
       if already_backed == false
         backer.back_project(self)
       end
+    end
   end
 end
