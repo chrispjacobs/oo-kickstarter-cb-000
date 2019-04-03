@@ -7,13 +7,13 @@ class Backer
   def back_project(project)
     @backed_projects << project
     already_backed = false
-    project.backers.each do |backer|
-      if backer == self
+    project.backers.each do |backer_case|
+      if backer_case == self
         already_backed = true
       end
-      if already_backed == false
-        project.add_backer(self)
-      end
+    end
+    if already_backed == false
+      project.add_backer(self)
     end
   end
 end
