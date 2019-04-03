@@ -6,13 +6,13 @@ class Project
   attr_reader :backers, :title
   def add_backer(backer)
     @backers << backer
-    already_backed = false
+    project_check = false
     backer.backed_projects.each do |backed_project|
       if backed_project == self
-        already_backed = true
+        project_check = true
       end
     end
-    if already_backed == false
+    if project_check == false
       backer.back_project(self)
     end
   end
